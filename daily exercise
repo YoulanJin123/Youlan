@@ -1,0 +1,403 @@
+#excercsie
+txt = "The best things in life are free!"
+print("free" in txt)
+
+a = "sdudent but"
+print("da" in a)
+
+if "sd" in a:
+  print("ohhh")
+  
+print("cc" not in a)
+
+if "aa" not in a:
+  print("nooo")
+  
+print(txt[6:10])
+print(txt[:10])
+print(txt[6:])
+q = "abcde"
+print(q[-5:-3])
+
+b = "  I am j.  "
+print(b.upper())
+print(b.lower())
+print(b.strip())
+print(b.replace("j", "z").strip())
+
+c = "oh, my god"
+print(c.split("m"))
+
+print(a + " " + b + " " + c)
+print(a+b+c)
+
+age = 24
+d = "he is {} years old."
+print(d.format(age))
+
+e = "there are {} apples."
+print(e.format(2))
+
+f = "{} women and {} men"
+print(f.format(3, 4))
+
+four = 4
+six = 6
+seven = 7
+james = "he said:\" {2}, {0}, {1}.\""
+print(james.format(four, six, seven))
+
+print(c.center(90))
+
+print(len(c))
+
+print(bool(complex(four)))
+
+dic_j = {}
+print(bool(dic_j))
+
+simple_calculate = 10**2
+print(simple_calculate)
+
+x = 3
+y = 4
+def youlan_func(x, y):
+  if x > y:
+    return 0
+  else:
+    return 1
+print(bool(youlan_func(x, y)))
+
+print(isinstance(x, str))
+
+print(6 != 1)
+print(not(x > 5 or x < 1))
+print(x is not four)
+
+youlan_sqc = [2, 3, 34, 84, 55, 64]
+print(2 not in youlan_sqc)
+
+print(youlan_sqc[:1])
+print(youlan_sqc[-4:-1])
+if 2 in youlan_sqc:
+  print("u r right")
+youlan_sqc[2:5] = ["jjb", "hxd", "wsm"]
+print(youlan_sqc)
+youlan_sqc[1:2] = ["ccd", "pls"]
+print(youlan_sqc)
+youlan_sqc.insert(2, "wow")
+print(youlan_sqc)
+youlan_sqc.append("another")
+print(youlan_sqc)
+
+onedict = {3: "hh", "oiy": "pp"}
+youlan_sqc.extend(onedict)
+print(youlan_sqc)
+
+youlan_sqc.remove("wsm")
+print(youlan_sqc)
+
+del youlan_sqc[1]
+print(youlan_sqc)
+
+#youlan_sqc.clear()
+
+for item in youlan_sqc:
+  print(item)
+
+print(range(3))
+
+for i in range(len(youlan_sqc)):
+  print(youlan_sqc[i])           #if only i, print 0 - 8
+  
+i = 0
+while i < len(youlan_sqc):
+  print(youlan_sqc[i])
+  i+=1
+  
+[print(x) for x in youlan_sqc]
+
+alist = ["apple", "aoiy", "then", "ioi", "way"] #int should not be in here
+newlist = []
+for i in alist:
+  if "a" in i:
+    newlist.append(i)
+print(newlist)
+
+#newlist = [expression for item in iterable if condition == True]
+
+blist = [x.upper() for x in alist if "a" not in x]
+print(blist)
+
+clist = ["good luck" for x in alist]
+print(clist)
+
+alist.sort(reverse = True)
+print(alist)
+
+thislist = [100, 50, 65, 82, 23]
+def afunc(x):
+  return abs(30 - x)
+thislist.sort(key = afunc)
+print(thislist)
+
+#if want a case-insensitive sort function, use str.lower as a key function
+thislist = ["banana", "Orange", "Kiwi", "cherry"]
+def afunc(x):
+  return abs(30 - x)
+thislist.sort(key = str.lower)
+print(thislist)
+
+dlist = alist.copy()
+print(dlist)
+
+dlist.append(alist)
+print(dlist)
+
+for i in alist:
+  clist.append(i)
+print(clist)
+thistuple = ("apple",)
+print(type(thistuple))
+
+#NOT a tuple
+thistuple = ("apple")
+print(type(thistuple))
+
+
+atuple = ("apple",)
+print(type(atuple))
+
+atuple = ("add", "yuu", "pop")
+print(atuple[0])
+
+a = list(atuple)
+a[1] = "dgd"
+a.append("eoo")
+a[0] = "oioi"
+atuple = tuple(a)
+print(atuple)
+
+btuple = ("idh", "dbb")
+atuple += btuple
+print(atuple)
+
+a = list(atuple)
+del a[2]
+atuple = tuple(a)
+print(atuple)
+
+(one, two, three, four, five) = atuple
+print(one)
+print(two)
+
+(one, two, *three) = atuple
+print(three)
+
+dnse = ("dbh",)
+
+for item in range(len(atuple)):
+  print(atuple[item])
+
+i = 0
+while i < len(atuple):
+  print(atuple[i])
+  i += 1
+
+  aset = {"iid", "dhnie", "dffj", 0}
+print(len(aset))
+
+bset = {"uu", "udf"}
+aset.update(bset)
+print(aset)
+
+newwlist = ["aaa","hhh"]
+aset.update(newwlist)
+print(aset)
+
+aset.remove("dffj")
+print(aset)
+
+aset. discard("s") #do not show error though no "s"
+print(aset)
+
+cset = {1, 12, 4, 8}
+dset = aset.union(cset)
+print(dset)
+
+cset.intersection_update(dset)
+print(cset)
+
+p = cset.intersection(dset)
+print(p)
+
+adic = {10:"oo", 20:["jien", "cejn"]}
+print(adic[20]) # can also use .get()
+
+u = adic.keys()
+print(u)
+
+adic[30] = "sgf"
+h = adic.values()
+print(h)
+
+g = adic.items()
+print(g)
+
+for x in adic:
+  print(adic[x])
+  
+for x in adic.values():
+  print(x)
+  
+print(adic)
+
+nestdic = {"child1": {"age": 12, "gender": "male"}, "child2": {"age": 13, "gender": "female"}}
+print(nestdic)
+
+mixdic = { 
+"adic" : adic,
+"nestdic" : nestdic
+}
+print(mixdic)
+
+print(mixdic["nestdic"]["child1"]["age"])
+      
+
+username = input("Enter username:")
+print("Username is: " + username)
+
+
+
+"""
+hvhv
+"""
+
+
+a = 136
+b = 88
+if a > b:
+  print("a>b")
+  if not a == 135:
+    print("and a!=135")
+else:
+  print("a<b")
+ 
+ 
+i = 0
+while i < 7:
+  print("i={}".format(i))
+  i += 1
+  if i == 4:
+    print("end")
+    break
+
+
+
+i = 0
+while i < 10:
+  i += 1
+  if i >= 4 and i <= 7:
+    continue
+  print("z has {} apple(s).".format(i))
+
+
+i = 0
+while i <= 10:
+  print("ooooo")
+  i += 1
+else:
+  print(233)
+  
+
+aset = ["dhr", "odpr", "hhh"]
+for x in aset:
+  if x == "hhh":
+    break
+  print(x)
+  
+    
+aset = ["dhr", "odpr", "hho"]
+for x in aset:
+  print(x) 
+  if x == "odpr":
+    break
+    
+for x in aset:
+  print("ohhhh")
+  if x == "odpr":
+    continue
+
+for x in range(2, 17, 3):
+  if x == 11:
+    break
+  print(x)
+else:
+  print("it's the end")
+
+for x in range(2, 30, 5):
+  for y in aset:
+    print(x, y)
+
+for x in range(9):
+  pass
+  
+def afunc():
+  print("pass!!!")
+
+afunc()
+
+def myfunc(name1, name2):
+  print("these are " + name1 + " and " + name2)
+
+myfunc("apple", "banana")
+
+def variafunc(*name):
+  print("the name is " + name[1])
+variafunc("dbu", "dnu", "dyr")
+
+def anofunc(**name):
+  print("pass! " + name["lname"])
+anofunc(fname = "youlan", lname = "jin")
+
+def afunc(name = "me"):
+  print("my name is" + name)
+  
+afunc()
+afunc("Youlan")
+
+def sfunc(x,/):
+  print(x)
+sfunc(3) #when (x = 3), show error
+
+def ifunc(*,x):
+  print(x)
+ifunc(x = 3) #when (3), show error
+
+def testfunc():
+  x = 300
+  def anotherfunc():
+    print(x)
+  anotherfunc()
+testfunc()
+
+import datetime
+x = datetime.datetime.now()
+print(x)
+
+try:
+  print(xdofne)
+except:
+  print("ohhh nooooo")
+
+say = "hello"
+if say is str:
+  raise ("emmm")
+
+"""  
+username = input("please input your name:")
+print(username)
+"""
+#it's right but does not work
+
+
