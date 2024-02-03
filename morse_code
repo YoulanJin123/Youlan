@@ -1,17 +1,3 @@
-"""
-Write a Python function named morse_translator that translates a given string into Morse code.
-
-Each alphabetic character in the string should be translated to its corresponding Morse code equivalent.
-The Morse code for each character should be separated by a space.
-Each word in the string should be separated by a forward slash (/).
-The function should handle both uppercase and lowercase alphabetic characters.
-The function should be case-insensitive, meaning it treats uppercase and lowercase letters the same.
-Non-alphabetic characters (like numbers or symbols) should not be translated.
-
-https://en.wikipedia.org/wiki/Morse_code
-"""
-
-
 def morse_translator(text):
     # Morse code mapping
     morse_code_dict = {
@@ -43,7 +29,24 @@ def morse_translator(text):
         "Z": "--..",
     }
 
-    # Your code goes here
+    # Convert the input text to uppercase for case-insensitivity
+    text = text.upper()
+    morse_code = []
+
+    # Iterate through each character in the text
+    for char in text:
+        # Check if the character is alphabetic
+        if char.isalpha():
+            # Get the Morse code equivalent for the character
+            morse_code_char = morse_code_dict[char]
+            # Append the Morse code character to the list
+            morse_code.append(morse_code_char)
+        elif char == " ":
+            # If the character is a space, add a forward slash (/) to separate words
+            morse_code.append("/")
+            
+    # Join the Morse code characters with spaces to form the final Morse code string
+    return " ".join(morse_code)
 
 
 # Test cases
